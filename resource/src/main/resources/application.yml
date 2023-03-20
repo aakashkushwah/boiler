@@ -1,0 +1,24 @@
+server:
+  port: 8090
+
+logging:
+  level:
+    root: INFO
+    org.springframework.web: INFO
+    org.springframework.security: INFO
+    org.springframework.security.oauth2: INFO
+
+spring:
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://localhost:8080
+
+spring.datasource:
+  url: jdbc:postgresql://localhost:5432/demo
+  username: root
+  password: password
+
+spring.jpa.properties.hibernate.dialect: org.hibernate.dialect.PostgreSQLDialect
+spring.jpa.hibernate.ddl-auto: update
